@@ -18,6 +18,9 @@ differential=no
 # Number of full backups to keep
 keepnum=10
 
+#backup location, Currently only supports s3 and local/SAN
+backuploc=local
+
 #s3 bucket name
 s3bucket=
 

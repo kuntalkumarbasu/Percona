@@ -2,7 +2,8 @@
 
 # bgbackup - A backup shell script for MariaDB, MySQL and Percona
 #
-# Authors: Kuntal.Basu@pointclickcare.com
+# Author: collected from internet
+# Modifier: Kuntal Basu
 
 
 
@@ -561,7 +562,10 @@ config_check # Check vital configuration parameters
 
 backer_upper # Execute the backup.
 
+#checking iof the s3 backup is enabled
+if [ "$backuploc" = "s3" ] ; then
 sendbackupToS3 # Sending the backup to s3 
+fi
 
 backup_cleanup # Cleanup old backups.
 
